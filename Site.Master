@@ -26,6 +26,7 @@
     <!-- NB: Content goes inside the form! -->
 
     <form runat="server">
+
         <!-- NB: Do not remove, I do not understand any of this! -->
         <!-- Keep on top! -->
         <asp:ScriptManager runat="server">
@@ -51,38 +52,6 @@
 
         <!--== HEADER ==-->
         <header class="header" id="header">
-             <%--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-     <div class="container">
-         <a class="navbar-brand" runat="server" href="~/">Application name</a>
-         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-             aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-             <ul class="navbar-nav flex-grow-1">
-                 <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
-                 <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
-                 <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
-             </ul>
-             <asp:LoginView runat="server" ViewStateMode="Disabled">
-                 <AnonymousTemplate>
-                     <ul class="navbar-nav navbar-right">
-                         <li><a runat="server" class="nav-link" href="~/Account/Register">Register</a></li>
-                         <li><a runat="server" class="nav-link" href="~/Account/Login">Log in</a></li>
-                     </ul>
-                 </AnonymousTemplate>
-                 <LoggedInTemplate>
-                     <ul class="navbar-nav navbar-right">
-                         <li><a runat="server" class="nav-link" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                         <li>
-                             <asp:LoginStatus runat="server" CssClass="nav-link" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                         </li>
-                     </ul>
-                 </LoggedInTemplate>
-             </asp:LoginView>
-         </div>
-     </div>
- </nav>--%>
             <nav class="nav container">
                 <a href="~/" runat="server" class="nav__logo">
                     <span class="nav__logo-circle">T</span>
@@ -116,7 +85,7 @@
                         </li>
 
                         <li class="nav__item">
-                            <a href="~/Policy" runat="server" class="nav__link">Policy</a>
+                            <a href="~/Cart" runat="server" class="nav__link">Cart</a>
                         </li>
 
                         <li class="nav__item">
@@ -126,7 +95,7 @@
 
                     <!--Close button-->
                     <div class="nav__close" id="nav-close">
-                        <img src="Resources/close-icon.png" alt="icon not supported by browser" height="12" width="12">
+                        <img src="Resources/close (1).png" alt="icon not supported by browser" height="12" width="12">
                     </div>
                 </div>
 
@@ -136,29 +105,24 @@
                     
                     <!-- Toggle button -->
                     <div class="nav__toggle" id="nav-toggle">
-                        <img src="Resources/hurmbuger-menu-1.png" alt="icon not supported by browser" height="12" width="12">
+                        <img src="Resources/menu (1).png" alt="icon not supported by browser" height="12" width="12">
                     </div>
                 </div>
             </nav>
         </header>
 
-        <!-- NB: Do not remove, I do not understand any of this! -->
-        <!-- Keep at the bottom -->
-        <div class="container body-content">
+        <div class="body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>          
         </div>
 
-        <!--== JAVASCRIPT ==-->
-        <script src="~/Custom_JS/source.js"></script>
     </form>
 
-    <!-- NB: Do not remove, I do not understand any of this! -->
-    <!-- Keep at the bottom -->
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
     </asp:PlaceHolder>
 
+    <!--== JAVASCRIPT ==-->
     <script src="Custom_JS/source.js"></script>
 </body>
     
