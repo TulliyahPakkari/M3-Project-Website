@@ -2,8 +2,16 @@
 
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <!-- This CSS is only applied to this page -->
+        <webopt:bundlereference runat="server" path="~/Content/css" />
+</asp:Content>
+
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <main aria-labelledby="title">
+        <div class="container">
+            <br><br><br><br><br><br>
+
         <h2 id="title"><%: Title %>.</h2>
 
         <div>
@@ -74,6 +82,8 @@
                     </dd>
                 </dl>
             </div>
+        </div>
+
         </div>
     </main>
 </asp:Content>

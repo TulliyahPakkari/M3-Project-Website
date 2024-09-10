@@ -1,7 +1,15 @@
 ﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Townbush_Pharmacy_Website.Account.Register" %>
 
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <!-- This CSS is only applied to this page -->
+        <webopt:bundlereference runat="server" path="~/Content/css" />
+</asp:Content>
+
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <main aria-labelledby="title">
+        <div class="container">
+            <br><br><br><br><br><br>
+
         <h2 id="title"><%: Title %>.</h2>
         <p class="text-danger">
             <asp:Literal runat="server" ID="ErrorMessage" />
@@ -39,6 +47,8 @@
             <div class="offset-md-2 col-md-10">
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-outline-dark" />
             </div>
+        </div>
+
         </div>
     </main>
 </asp:Content>

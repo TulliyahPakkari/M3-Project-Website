@@ -12,10 +12,10 @@
 
                <div class="home__info">
                     <p class="home__description">
-                        Welcome! Now offering dietary and health insights. We offer the best advice. Click <a href="~/instights"><b>Health Insights</b></a> to check it out!
+                        Welcome! Now offering dietary and health insights. We offer the best advice. Click <a href="~/Insights" runat="server"><b>Health Insights</b></a> to check it out!
                     </p>
 
-                    <a href="~/" class="home__scroll">
+                    <a href="#services"  class="home__scroll">
                         <div class="home__scroll-box">
                             <img src="Resources/arrow-down-1.png" alt="graphic not supported by browser" height="10" width="10">
                         </div>

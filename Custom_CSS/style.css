@@ -336,10 +336,11 @@ body.dark-theme {
     display: flex;
     flex-direction: column;
     row-gap: 3.5rem;
+    transform: translateY(6px);
 }
 
 .nav__item {
-    margin: -1rem;
+    margin: -1.25rem;
 }
 
 .nav__link {

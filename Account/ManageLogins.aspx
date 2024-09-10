@@ -1,8 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ManageLogins.aspx.cs" Inherits="Townbush_Pharmacy_Website.Account.ManageLogins" %>
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <!-- This CSS is only applied to this page -->
+        <webopt:bundlereference runat="server" path="~/Content/css" />
+</asp:Content>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <main aria-labelledby="title">
+        <div class="container">
+    <br><br /><br /><br /><br /><br />
+
         <h2 id="title">Manage your external logins.</h2>
         <asp:PlaceHolder runat="server" ID="successMessage" Visible="false" ViewStateMode="Disabled">
                 <p class="text-success"><%: SuccessMessage %></p>
@@ -39,6 +47,8 @@
         </div>
         <div>
             <uc:OpenAuthProviders runat="server" ReturnUrl="~/Account/ManageLogins" />
+        </div>
+
         </div>
     </main>
 </asp:Content>

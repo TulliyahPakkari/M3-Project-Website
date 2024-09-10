@@ -11,13 +11,13 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <!--<webopt:bundlereference runat="server" path="~/Content/css" />-->
     <!--<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
 
     <!--== FAVICON ==-->
     <link href="~/Resources/logoIcon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <!--== STYLESHEET ==-->
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
     <link rel="stylesheet" href="~/Custom_CSS/style.css" />
 
 </head>
@@ -73,12 +73,13 @@
                         </li>
 
                         <li class="nav__item">
-                            <a href="~/Services" runat="server" class="nav__link">Services</a>
+                            <a href="~/Products" runat="server" class="nav__link">Products</a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="~/Products" runat="server" class="nav__link">Products</a>
+                            <a href="~/Services" runat="server" class="nav__link">Services</a>
                         </li>
+
 
                         <li class="nav__item">
                             <a href="~/Insights" runat="server" class="nav__link">Health Insights</a>
@@ -91,6 +92,30 @@
                         <li class="nav__item">
                             <a href="~/Contact" runat="server" class="nav__link nav__link-button">Contact Us</a>
                         </li>
+
+                        <asp:LoginView runat="server" ViewStateMode="Disabled">
+                            <AnonymousTemplate>
+                                <ul class="navbar-nav navbar-right">
+                                    <li  class="nav__item"><a runat="server" class="nav-link nav__link" href="~/Account/Login">Log in</a></li>
+                                </ul>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                <ul class="navbar-nav navbar-right">
+                                    <li  class="nav__item"><a runat="server" class="nav-link nav__link" href="~/Account/Manage" title="Manage your account">Account</a></li>
+                                </ul>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+
+                        <asp:LoginView runat="server" ViewStateMode="Disabled">
+                            <LoggedInTemplate>
+                                <ul class="navbar-nav navbar-right">
+                                    <li  class="nav__item">
+                                        <asp:LoginStatus runat="server" CssClass="nav-link nav__link" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    </li>
+                                </ul>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+
                     </ul>
 
                     <!--Close button-->
@@ -100,9 +125,6 @@
                 </div>
 
                 <div class="nav__buttons">
-                    <!-- Theme button -->
-                    <img src="Resources/moon-line-1.png" alt="icon not supported by browser" class="change-theme" id="theme-button" height="12" width="12">
-                    
                     <!-- Toggle button -->
                     <div class="nav__toggle" id="nav-toggle">
                         <img src="Resources/menu (1).png" alt="icon not supported by browser" height="12" width="12">

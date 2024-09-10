@@ -1,7 +1,14 @@
 ﻿<%@ Page Title="Manage Password" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ManagePassword.aspx.cs" Inherits="Townbush_Pharmacy_Website.Account.ManagePassword" %>
 
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <!-- This CSS is only applied to this page -->
+        <webopt:bundlereference runat="server" path="~/Content/css" />
+</asp:Content>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <main aria-labelledby="title">
+        <div class="container">
+            <br><br /><br /><br /><br /><br />
         <h2 id="title"><%: Title %>.</h2>
         <div class="row">
             <section id="passwordForm">
@@ -90,6 +97,8 @@
                     </div>
                 </asp:PlaceHolder>
             </section>
+        </div>
+
         </div>
     </main>
 </asp:Content>
