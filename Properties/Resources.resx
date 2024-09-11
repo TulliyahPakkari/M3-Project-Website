@@ -145,9 +145,6 @@
   <data name="fast_delivery" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fast-delivery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FlexingCouch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FlexingCouch.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="insta_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\insta_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

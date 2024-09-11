@@ -163,16 +163,6 @@ namespace Townbush_Pharmacy_Website.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FlexingCouch {
-            get {
-                object obj = ResourceManager.GetObject("FlexingCouch", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap insta_icon {
             get {
                 object obj = ResourceManager.GetObject("insta_icon", resourceCulture);

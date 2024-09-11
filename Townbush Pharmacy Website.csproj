@@ -206,9 +206,6 @@
     <None Include="Resources\three-section-layout-1.png" />
     <None Include="Resources\code-box-line.png" />
     <None Include="Resources\smartphone-line-1.png" />
-    <None Include="Resources\vaccine.png" />
-    <None Include="Resources\fast-delivery.png" />
-    <None Include="Resources\talking.png" />
     <None Include="Resources\linkedin_icon.png" />
     <None Include="Resources\linkedin_icon1.png" />
     <None Include="Resources\insta_icon1.png" />
@@ -229,6 +226,9 @@
     <None Include="Resources\white_doctor.jpg" />
     <Content Include="Insights.aspx" />
     <Content Include="Products.aspx" />
+    <None Include="Resources\fast-delivery.png" />
+    <None Include="Resources\talking.png" />
+    <None Include="Resources\vaccine.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
