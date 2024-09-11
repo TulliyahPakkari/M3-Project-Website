@@ -73,7 +73,7 @@
                         </li>
 
                         <li class="nav__item">
-                            <a href="~/Products" runat="server" class="nav__link">Products</a>
+                            <a href="~/Products" runat="server" class="nav__link">Shop</a>
                         </li>
 
                         <li class="nav__item">
@@ -135,10 +135,33 @@
 
         <div class="body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>          
+            </asp:ContentPlaceHolder>
         </div>
-
     </form>
+
+    <!--== FOOTER ==-->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <ul class="footer__links">
+                 <li>
+                    <a href="About" class="footer__link">About</a>
+                 </li>
+
+                 <li>
+                    <a href="#services" class="footer__link">Services</a>
+                 </li>
+
+                 <li>
+                    <a href="Products" class="footer__link">Products</a>
+                 </li>
+            </ul>
+
+            <span class="footer__copy">
+                &#169; All Rights Reserved By
+                <a href="~/">Pharmaflow~Pioneers.</a>
+            </span>
+        </div>
+    </footer>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>

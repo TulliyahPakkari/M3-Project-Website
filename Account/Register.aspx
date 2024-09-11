@@ -43,6 +43,7 @@
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
             </div>
         </div>
+            <br />
         <div class="row">
             <div class="offset-md-2 col-md-10">
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-outline-dark" />
@@ -51,4 +52,5 @@
 
         </div>
     </main>
+     <br /><br /><br />
 </asp:Content>

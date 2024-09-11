@@ -185,6 +185,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Private\Web.config" />
     <None Include="Resources\beautiful.jpeg" />
     <None Include="Resources\beautiful1.jpeg" />
     <None Include="Resources\logoIcon.ico" />
