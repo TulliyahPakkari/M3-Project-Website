@@ -13,5 +13,26 @@ namespace Townbush_Pharmacy_Website
         {
 
         }
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                // Format ProdName to be in title case
+                e.Row.Cells[0].Text = ToTitleCase(e.Row.Cells[0].Text);
+
+                // Format ProdDescription to be in title case
+                e.Row.Cells[1].Text = ToTitleCase(e.Row.Cells[1].Text);
+
+                // Format Form to be in title case
+                e.Row.Cells[2].Text = ToTitleCase(e.Row.Cells[2].Text);
+            }
+        }
+
+        // Utility method to convert a string to title case
+        public string ToTitleCase(string str)
+        {
+            return System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(str.ToLower());
+        }
     }
 }

@@ -236,6 +236,10 @@ body.dark-theme {
     overflow: hidden; /* For animation ScrollReveal */
 }
 
+.capitalize {
+    text-transform: lowercase;
+}
+
 /*================ HEADER AND NAV ================*/
 .header {
     position: fixed;

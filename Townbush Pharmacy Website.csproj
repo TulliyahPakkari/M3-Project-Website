@@ -225,6 +225,7 @@
     <None Include="Resources\close.png" />
     <None Include="Resources\white_doctor.jpg" />
     <Content Include="Insights.aspx" />
+    <Content Include="Private\ManageProducts.aspx" />
     <Content Include="Products.aspx" />
     <None Include="Resources\fast-delivery.png" />
     <None Include="Resources\talking.png" />
@@ -441,6 +442,13 @@
       <DependentUpon>Insights.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Private\ManageProducts.aspx.cs">
+      <DependentUpon>ManageProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Private\ManageProducts.aspx.designer.cs">
+      <DependentUpon>ManageProducts.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
