@@ -17,5 +17,10 @@ namespace Townbush_Pharmacy_Website
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        void Session_Start (object sender, EventArgs e)
+        {
+            Session.Add("Cart", null);
+        }
     }
 }
