@@ -225,6 +225,7 @@
     <None Include="Resources\close.png" />
     <None Include="Resources\white_doctor.jpg" />
     <Content Include="Insights.aspx" />
+    <Content Include="Pictures\2.jpg" />
     <Content Include="Private\ManageProducts.aspx" />
     <Content Include="Products.aspx" />
     <None Include="Resources\fast-delivery.png" />
