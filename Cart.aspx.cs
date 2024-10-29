@@ -11,7 +11,20 @@ namespace Townbush_Pharmacy_Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                BindCart();
+            }
+        }
 
+        private void BindCart()
+        {
+            List<CartItem> cart = Session["Cart"] as List<CartItem>;
+            if (cart != null)
+            {
+                GridView1.DataSource = cart;
+                GridView1.DataBind();
+            }
         }
     }
 }

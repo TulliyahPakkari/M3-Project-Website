@@ -34,5 +34,42 @@ namespace Townbush_Pharmacy_Website
         {
             return System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(str.ToLower());
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int rowIndex = GridView1.SelectedIndex;
+            int prodID = Convert.ToInt32(GridView1.DataKeys[rowIndex].Values["ProdID"]);
+            string prodName = GridView1.DataKeys[rowIndex].Values["ProdName"].ToString();
+            decimal price = Convert.ToDecimal(GridView1.DataKeys[rowIndex].Values["ProdPrice"]);
+            int qty = Convert.ToInt32(GridView1.DataKeys[rowIndex].Values["Quantity"]);
+
+            CartItem cartItem = new CartItem
+            {
+                ProdID = prodID,
+                ProdName = prodName,
+                ProdPrice = price,
+                Quantity = qty,
+                SubTotal = price * qty
+            };
+
+            List<CartItem> cart = Session["Cart"] as List<CartItem> ?? new List<CartItem>();
+
+            // Check if the item is already in the cart
+            var existingItem = cart.FirstOrDefault(c => c.ProdID == cartItem.ProdID);
+            if (existingItem != null)
+            {
+                existingItem.Quantity++; // Increment quantity if it’s already in cart
+            }
+            else
+            {
+                cart.Add(cartItem); // Add new item to cart
+            }
+
+            // Update the session
+            Session["Cart"] = cart;
+
+            // Optionally, provide feedback or refresh the page
+            Response.Redirect("Cart.aspx");
+        }
     }
 }

@@ -4,6 +4,14 @@
        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
         <h1 style="font-size: 78px;">Cart.</h1>
-    <small>Coming soon!</small>
+    <asp:GridView ID="GridView1" runat="server">
+        <Columns>
+            <asp:BoundField DataField="ProdID" HeaderText="Product ID" />
+            <asp:BoundField DataField="ProdName" HeaderText="Product" />
+            <asp:BoundField DataField="ProdPrice" HeaderText="Price" />
+            <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
+            <asp:BoundField DataField="SubTotal" HeaderText="SubTotal" />
+        </Columns>
+    </asp:GridView>
 
 </asp:Content>
